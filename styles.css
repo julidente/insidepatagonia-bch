@@ -12,7 +12,6 @@ body, html {
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
-  background-attachment: fixed; /*  Fija la imagen de fondo */
   min-height: 100vh; /*  Evita recortes horizontales */
   min-width: 100vw; /*  Evita recortes laterales */
   position: relative;
