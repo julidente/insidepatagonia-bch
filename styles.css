@@ -46,7 +46,7 @@ p {
   margin-top: 20px;
 }
 
-/* ==== TABLETS ==== */
+
 /* Smartphones (hasta 480px) */
 @media (max-width: 480px) {
   .logo {
@@ -72,6 +72,52 @@ p {
   }
 }
 
+@media (max-width: 480px) {
+  body, html {
+    margin: 0;
+    padding: 0;
+    overflow-x: auto; /* ✅ habilita scroll lateral en todo el documento */
+    background-color: black;
+  }
+
+  .logo {
+    width: 120px;
+    top: 8px;
+    left: 8px;
+    max-width: 120px;
+  }
+
+  h1 {
+    font-size: 1.5em;
+    padding: 0 1rem;
+  }
+
+  p {
+    font-size: 0.95em;
+    padding: 0 1rem;
+  }
+
+  .container {
+    padding: 1rem;
+    background-position: top;
+  }
+
+  /* ✅ Scroll horizontal para imagen */
+  .imagen-contenedor {
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: auto;
+    background-color: black;
+    white-space: nowrap;
+  }
+
+  .imagen-contenedor img {
+    display: inline-block;
+    width: auto;
+    height: auto;
+  }
+}
+
 /* Tablets (hasta 768px) */
 @media (max-width: 768px) {
   .logo {
@@ -90,4 +136,39 @@ p {
     font-size: 1.1em;
     padding: 0 1.5rem;
   }
+
+  /* ✅ Repetimos lo mismo para tablets */
+  .imagen-contenedor {
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: auto;
+    background-color: black;
+    white-space: nowrap;
+  }
+
+  .imagen-contenedor img {
+    display: inline-block;
+    width: auto;
+    height: auto;
+  }
 }
+
+/* Tablets (hasta 768px) 
+@media (max-width: 768px) {
+  .logo {
+    width: 150px;
+    top: 10px;
+    left: 10px;
+    max-width: 150px;
+  }
+
+  h1 {
+    font-size: 2em;
+    padding: 0 1.5rem;
+  }
+
+  p {
+    font-size: 1.1em;
+    padding: 0 1.5rem;
+  }
+}*/
