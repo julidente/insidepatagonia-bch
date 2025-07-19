@@ -69,15 +69,13 @@ p {
   height: 100vh;
   overflow: auto;
   background-color: black;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 
 .imagen-contenedor img {
-  min-width: 100vw;
-  min-height: 100vh;
-  object-fit: contain;
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: none;
+  max-height: none;
 }
 
   .contenido {
@@ -129,4 +127,4 @@ p {
     font-size: 0.95em;
     padding: 0 1rem;
   }
-}
+} }
