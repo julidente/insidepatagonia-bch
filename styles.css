@@ -1,3 +1,4 @@
+
 body, html {
   margin: 0;
   padding: 0;
@@ -9,6 +10,7 @@ body, html {
   background-image: url('img/portada.png');
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
   height: 100vh;
   position: relative;
   display: flex;
@@ -20,24 +22,20 @@ body, html {
   text-shadow: 2px 2px 4px #000;
 }
 
-
+/* Ocultar versión móvil por defecto */
+.imagen-contenedor,
+.contenido {
+  display: none;
+}
 
 .logo {
   position: absolute;
-  width:  250px;
+  width: 250px;
   top: 20px;
   left: 20px;
   max-width: 200px;
 }
 
-.texto {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-  min-height: 100vh; /* espacio vertical para centrar */
-}
 h1 {
   font-size: 2.5em;
   margin: 0;
@@ -48,13 +46,72 @@ p {
   margin-top: 20px;
 }
 
-/* Smartphones (hasta 480px) */
-@media (max-width: 480px) {
-  
-  body, html {
-    overflow-x: auto;
+/* ==== TABLETS ==== */
+@media (max-width: 768px) {
+  /* Ocultar versión PC */
+  .container {
+    display: none;
   }
-  
+
+  /* Mostrar versión móvil/tablet */
+  .imagen-contenedor,
+  .contenido {
+    display: block;
+  }
+
+  body, html {
+    overflow: auto;
+    background-color: black;
+  }
+
+  .imagen-contenedor {
+    width: fit-content;
+    height: fit-content;
+    overflow: auto;
+    background-color: black;
+  }
+
+  .imagen-contenedor img {
+    display: block;
+    max-width: none;
+    max-height: none;
+    width: auto;
+    height: auto;
+  }
+
+  .contenido {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 1rem;
+    width: 100%;
+    color: white;
+    text-shadow: 2px 2px 4px #000;
+  }
+
+  .logo {
+    width: 150px;
+    top: 10px;
+    left: 10px;
+    max-width: 150px;
+    position: absolute;
+  }
+
+  h1 {
+    font-size: 2em;
+    padding: 0 1.5rem;
+    text-align: right;
+  }
+
+  p {
+    font-size: 1.1em;
+    padding: 0 1.5rem;
+    text-align: right;
+  }
+}
+
+/* ==== CELULARES ==== */
+@media (max-width: 480px) {
   .logo {
     width: 120px;
     top: 8px;
@@ -70,53 +127,5 @@ p {
   p {
     font-size: 0.95em;
     padding: 0 1rem;
-  }
-
-  .container {
-    padding: 1rem;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: top center;
-    background-color: black;
-    overflow-x: auto;
-    width: 100vw;
-    min-height: 100vh;
-    box-sizing: border-box;
-  }
-}
-
-/* Tablets (hasta 768px) */
-@media (max-width: 768px) {
-
-  body, html {
-    overflow-x: auto;
-  }
-
-  .logo {
-    width: 150px;
-    top: 10px;
-    left: 10px;
-    max-width: 150px;
-  }
-
-  h1 {
-    font-size: 2em;
-    padding: 0 1.5rem;
-  }
-
-  p {
-    font-size: 1.1em;
-    padding: 0 1.5rem;
-  }
-  .container {
-    padding: 1rem;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: top center;
-    background-color: black;
-    overflow-x: auto;
-    width: 100vw;
-    min-height: 100vh;
-    box-sizing: border-box;
   }
 }
