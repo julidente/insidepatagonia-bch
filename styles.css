@@ -47,105 +47,47 @@ p {
 }
 
 /* ==== TABLETS ==== */
-@media (max-width: 768px) {
-  /* Oculta versión PC */
+/* Smartphones (hasta 480px) */
+@media (max-width: 480px) {
+  .logo {
+    width: 120px;
+    top: 8px;
+    left: 8px;
+    max-width: 120px;
+  }
+
+  h1 {
+    font-size: 1.5em;
+    padding: 0 1rem;
+  }
+
+  p {
+    font-size: 0.95em;
+    padding: 0 1rem;
+  }
+
   .container {
-    display: none;
-  }
-
-  /* Muestra versión móvil */
-  .imagen-contenedor,
-  .contenido {
-    display: block;
-  }
-
-  body, html {
-    margin: 0;
-    padding: 0;
-    width: 100vw;
-    height: 100vh;
-    overflow: auto;
-    background-color: black;
-  }
-
-  .imagen-contenedor {
-    background-color: black;
-    overflow: auto;
-  }
-
-  .imagen-contenedor img {
-    width: 100vw;
-    height: auto;
-    min-height: 100vh; /* ✅ Clave para evitar huecos abajo */
-    display: block;
-  }
-
-  .contenido {
-    position: absolute;
-    top: 0;
-    left: 0;
     padding: 1rem;
-    width: 100%;
-    color: white;
-    text-shadow: 2px 2px 4px #000;
+    background-position: top;
   }
+}
 
+/* Tablets (hasta 768px) */
+@media (max-width: 768px) {
   .logo {
     width: 150px;
     top: 10px;
     left: 10px;
     max-width: 150px;
-    position: absolute;
   }
 
   h1 {
     font-size: 2em;
     padding: 0 1.5rem;
-    text-align: right;
   }
 
   p {
     font-size: 1.1em;
     padding: 0 1.5rem;
-    text-align: right;
-  }
-}
-
-@media (max-width: 480px) {
-  .logo {
-    width: 120px;
-    top: 8px;
-    left: 8px;
-    max-width: 120px;
-  }
-
-  h1 {
-    font-size: 1.5em;
-    padding: 0 1rem;
-  }
-
-  p {
-    font-size: 0.95em;
-    padding: 0 1rem;
-  }
-}
-
-/* ==== CELULARES (hasta 480px) ==== */
-@media (max-width: 480px) {
-  .logo {
-    width: 120px;
-    top: 8px;
-    left: 8px;
-    max-width: 120px;
-  }
-
-  h1 {
-    font-size: 1.5em;
-    padding: 0 1rem;
-  }
-
-  p {
-    font-size: 0.95em;
-    padding: 0 1rem;
   }
 }
