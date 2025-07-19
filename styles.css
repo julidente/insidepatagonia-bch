@@ -48,43 +48,41 @@ p {
 
 /* ==== TABLETS ==== */
 @media (max-width: 768px) {
-  /* Ocultar versión PC */
+  /* Ocultar versión de fondo */
   .container {
     display: none;
   }
 
-  /* Mostrar versión móvil/tablet */
+  /* Mostrar imagen como contenido */
   .imagen-contenedor,
   .contenido {
     display: block;
   }
 
   body, html {
-    overflow: auto;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
     background-color: black;
   }
 
-.imagen-contenedor {
-  width: 100vw;
-  overflow: hidden;
-  background-color: black;
-  display: flex;
-  justify-content: center;
-}
-.imagen-contenedor img {
-  max-width: 100%;
-  max-height: 100%;
-  width: auto;
-  height: auto;
-  display: block;
-}
-.contenedor-imagen {
-    position: relative;
-    width: 100%;
+  .imagen-contenedor {
+    width: 100vw;
     height: 100vh;
+    background-color: black;
+    overflow: hidden;
     display: flex;
     justify-content: center;
-    align-items: center; }
+    align-items: center;
+  }
+
+  .imagen-contenedor img {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    display: block;
+  }
 
   .contenido {
     position: absolute;
@@ -117,7 +115,7 @@ p {
   }
 }
 
-/* ==== CELULARES ==== */
+/* ==== CELULARES (hasta 480px) ==== */
 @media (max-width: 480px) {
   .logo {
     width: 120px;
@@ -135,4 +133,4 @@ p {
     font-size: 0.95em;
     padding: 0 1rem;
   }
-} 
+}
