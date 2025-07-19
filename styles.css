@@ -64,20 +64,21 @@ p {
     background-color: black;
   }
 
-  .imagen-contenedor {
-    width: fit-content;
-    height: fit-content;
-    overflow: auto;
-    background-color: black;
-  }
+.imagen-contenedor {
+  width: 100vw;
+  height: 100vh;
+  overflow: auto;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-  .imagen-contenedor img {
-    display: block;
-    max-width: none;
-    max-height: none;
-    width: auto;
-    height: auto;
-  }
+.imagen-contenedor img {
+  min-width: 100vw;
+  min-height: 100vh;
+  object-fit: contain;
+}
 
   .contenido {
     position: absolute;
